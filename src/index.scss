@@ -1,0 +1,116 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: #30295140;
+}
+
+*:focus-visible {
+  outline-color: var(--primary-tone-1);
+}
+
+// ::selection {
+//   color: var(--white-tone-100);
+//   background: #30295180;
+// }
+// ::-moz-selection {
+//   color: var(--light-tone-100);
+//   background: #30295180;
+// }
+
+:root {
+  --light-tone-100: #f6f7f9;
+  --light-tone-200: #e5e8ee;
+  --light-tone-300: #d4d9e3;
+  --light-tone-400: #c3cad8;
+  --light-tone-500: #b2bbcd;
+  --light-tone-600: #a1acc1;
+  --light-tone-700: #909cb6;
+  --light-tone-800: #7f8dab;
+  --light-tone-900: #6d7ea0;
+
+  --dark-tone-100: #5f7092;
+  --dark-tone-200: #546380;
+  --dark-tone-300: #49566f;
+  --dark-tone-400: #3e485e;
+  --dark-tone-500: #323b4d;
+  --dark-tone-600: #272e3c;
+  --dark-tone-700: #1c212b;
+  --dark-tone-800: #11141a;
+  --dark-tone-900: #060709;
+
+  --default-box-shadow: 0 3px 10px rgba(36, 31, 61, 0.05),
+    0 3px 3px rgba(36, 31, 61, 0.025);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+html {
+  font-size: 16px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+
+  color: var(--light-tone-100);
+  background-color: transparent;
+
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+}
+
+h1,
+p,
+ul {
+  margin: 0.3em 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: var(--light-tone-500);
+  font-family: "Roboto Mono";
+  font-size: 13.5px;
+}
+
+.link {
+  color: var(--light-tone-800);
+  text-decoration: inherit;
+  cursor: pointer;
+
+  .tactile & {
+    padding: 3px;
+  }
+
+  &.underlined {
+    text-decoration: underline;
+  }
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: inherit;
+  border: inherit;
+}
