@@ -3,21 +3,17 @@ import useIsTactile from "./hooks/useIsTactile";
 
 import Main from "./Main";
 
-import Spinner from "./specific/Spinner";
+import Spinner from "./components/Spinner";
 
-import { css } from "./utils";
+import useResponsive from "./hooks/useReponsive";
 
 import "./Root.scss";
 
 function Root() {
+  useResponsive(document.getElementById("root")!);
+
   return (
-    <div
-      className={css.join(
-        "root",
-        useIsMobile() ? "mobile" : "desktop",
-        useIsTactile() ? "tactile" : "notTactile"
-      )}
-    >
+    <div className={"root"}>
       <Spinner />
 
       <Main />

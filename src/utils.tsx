@@ -14,3 +14,11 @@ export let css = {
   join: (...cns: (string | null | undefined | false)[]) =>
     cns.filter((cn) => !!cn).join(" "),
 };
+
+export let randomizeArray = <T,>(array: T[]): T[] => {
+  for (let i = array.length - 1; i > 0; i--) {
+    let newI = Math.floor(Math.random() * (i + 1));
+    [array[i], array[newI]] = [array[newI], array[i]];
+  }
+  return array;
+};
